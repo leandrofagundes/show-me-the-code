@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30204.135
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApi.Juros", "WebApi.Juros\WebApi.Juros.csproj", "{5A2F99BF-FAD4-47AB-AE1F-B56ADC1D27D4}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApi.Juros.Tests", "WebApi.Juros.Tests\WebApi.Juros.Tests.csproj", "{92A77DEA-76E4-4684-817A-787EF249BCD8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5A2F99BF-FAD4-47AB-AE1F-B56ADC1D27D4}.Debug|x64.ActiveCfg = Debug|x64
+		{5A2F99BF-FAD4-47AB-AE1F-B56ADC1D27D4}.Debug|x64.Build.0 = Debug|x64
+		{5A2F99BF-FAD4-47AB-AE1F-B56ADC1D27D4}.Release|x64.ActiveCfg = Release|x64
+		{5A2F99BF-FAD4-47AB-AE1F-B56ADC1D27D4}.Release|x64.Build.0 = Release|x64
+		{92A77DEA-76E4-4684-817A-787EF249BCD8}.Debug|x64.ActiveCfg = Debug|x64
+		{92A77DEA-76E4-4684-817A-787EF249BCD8}.Debug|x64.Build.0 = Debug|x64
+		{92A77DEA-76E4-4684-817A-787EF249BCD8}.Release|x64.ActiveCfg = Release|x64
+		{92A77DEA-76E4-4684-817A-787EF249BCD8}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E7529C35-2121-4087-B08C-3D291226AC72}
+	EndGlobalSection
+EndGlobal
