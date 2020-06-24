@@ -7,7 +7,7 @@ namespace WebApi.Juros.Controllers
     /// <summary>
     /// Controller responsável por gerenciar requisições referentes a taxa de juros.
     /// </summary>
-    [Route("api/[controller]")]
+    [Route("[controller]")]
     [ApiController]
     public class TaxaJuros : Controller
     {
