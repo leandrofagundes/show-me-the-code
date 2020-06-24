@@ -1,20 +1,18 @@
-# Introduction 
-TODO: Give a short introduction of your project. Let this section explain the objectives or the motivation behind this project. 
+# Introdução 
+Irei desenvolver um simples projeto utilizando Asp.Net Core com duas APIs que se comunicam para obter o resultado de um cálculo.
+A primeira API deve conter o valor de juros (um valor fixo inicialmente), enquanto a segunda API deve receber em um dos seus endpoints, o valor e o prazo no qual o juros deverá ser calculado.
+A segunda API deve consumir o valor de juros da primeira e apresentar o resultante.
 
-# Getting Started
-TODO: Guide users through getting your code up and running on their own system. In this section you can talk about:
-1.	Installation process
-2.	Software dependencies
-3.	Latest releases
-4.	API references
+# Ferramentas e Stacks
+Pretendo utilizar ASP.NET Core 3.1 para as APIs, Docker para distribuição, .NetStandard 2.1 para os testes unitários e Swagger para documentação da API.
+A ideia é trabalhar utilizando so cartões do boards em uma visão de scrum com git flow para os fontes.
+
+# Iniciando
+TODO
+1.	
+2.	
+3.	
+4.	
 
 # Build and Test
-TODO: Describe and show how to build your code and run the tests. 
-
-# Contribute
-TODO: Explain how other users and developers can contribute to make your code better. 
-
-If you want to learn more about creating good readme files then refer the following [guidelines](https://docs.microsoft.com/en-us/azure/devops/repos/git/create-a-readme?view=azure-devops). You can also seek inspiration from the below readme files:
-- [ASP.NET Core](https://github.com/aspnet/Home)
-- [Visual Studio Code](https://github.com/Microsoft/vscode)
-- [Chakra Core](https://github.com/Microsoft/ChakraCore)
+TODO

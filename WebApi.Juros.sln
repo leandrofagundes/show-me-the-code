@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30204.135
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApi.Juros", "WebApi.Juros\WebApi.Juros.csproj", "{5A2F99BF-FAD4-47AB-AE1F-B56ADC1D27D4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5A2F99BF-FAD4-47AB-AE1F-B56ADC1D27D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A2F99BF-FAD4-47AB-AE1F-B56ADC1D27D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A2F99BF-FAD4-47AB-AE1F-B56ADC1D27D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A2F99BF-FAD4-47AB-AE1F-B56ADC1D27D4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E7529C35-2121-4087-B08C-3D291226AC72}
+	EndGlobalSection
+EndGlobal
