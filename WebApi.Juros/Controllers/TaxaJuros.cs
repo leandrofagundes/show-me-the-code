@@ -1,8 +1,12 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using WebApi.Juros.Services;
 
 namespace WebApi.Juros.Controllers
 {
+    /// <summary>
+    /// Controller responsável por gerenciar requisições referentes a taxa de juros.
+    /// </summary>
     [Route("api/[controller]")]
     [ApiController]
     public class TaxaJuros : Controller
@@ -15,11 +19,11 @@ namespace WebApi.Juros.Controllers
         /// <returns>Retorna um double com a taxa de juros.</returns>
         [HttpGet]
         [ProducesResponseType(StatusCodes.Status200OK)]
-        [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-        public IActionResult Get()
+        public IActionResult Get([FromServices] TaxaJurosService taxaJurosService)
         {
-            return new OkObjectResult(0.01);
+            var taxaJuros = taxaJurosService.ObterTaxaJuros();
+            return new OkObjectResult(taxaJuros);
         }
     }
 }

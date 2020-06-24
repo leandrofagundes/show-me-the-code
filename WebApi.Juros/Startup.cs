@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using WebApi.Juros.DependencyInjections;
 
 namespace WebApi.Juros
 {
@@ -11,6 +12,8 @@ namespace WebApi.Juros
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            services.AddApplicationServices();
+            services.AddSwagger();
         }
 
 
@@ -22,6 +25,7 @@ namespace WebApi.Juros
             }
 
             app.UseRouting();
+            app.UseSwaggerUI();
 
             app.UseEndpoints(endpoints =>
             {
