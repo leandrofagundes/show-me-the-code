@@ -3,7 +3,7 @@ using WebApi.Calculadora.Interfaces;
 
 namespace WebApi.Calculadora.Services
 {
-    internal sealed class CalculadoraJurosCompostoService
+    public sealed class CalculadoraJurosCompostoService
         : ICalculadoraJuros
     {
         public double CalculaJuros(decimal valorInicial, int numeroMeses, decimal taxaJuros)
