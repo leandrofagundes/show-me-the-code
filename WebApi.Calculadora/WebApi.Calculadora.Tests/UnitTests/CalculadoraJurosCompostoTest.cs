@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Threading.Tasks;
+using WebApi.Calculadora.Domain.ValueObjects;
 using WebApi.Calculadora.Tests.Fixtures;
 using Xunit;
 
@@ -14,27 +16,34 @@ namespace WebApi.Calculadora.Tests.UnitTests
         }
 
         [Fact]
-        public void CalcularTaxaJurosCompostoComSucesso()
+        public async Task CalcularTaxaJurosCompostoComSucesso()
         {
-            var valorFinalComJuros = _fixtures.CalculadoraJurosService.CalculaJuros(100, 5, (decimal)0.01);
+            var valorFinalComJuros = await _fixtures.CalculadoraJurosService.CalculaJurosAsync(
+                new CalculadoraJurosValorInicial(100),
+                 new CalculadoraJurosMeses(5));
 
-            var valorObtido = valorFinalComJuros.ToString("0.00",System.Globalization.CultureInfo.GetCultureInfo("pt-BR"));
+            var valorObtido = valorFinalComJuros.ToString();
             var valorEsperado = "105,10";
 
             Assert.Equal(valorEsperado, valorObtido);
         }
 
         [Theory]
-        [InlineData(100, 5, 0.01)]
-        [InlineData(100, 10, 0.01)]
-        [InlineData(1100, 10, 0.01)]
-        [InlineData(1100, 5, 0.01)]
-        public void CalcularTaxaJurosCompostoEmLista(decimal valorInicial, int numeroMeses, decimal taxaJuros)
+        [InlineData(100, 5)]
+        [InlineData(100, 10)]
+        [InlineData(1100, 10)]
+        [InlineData(1100, 5)]
+        public async Task CalcularTaxaJurosCompostoEmLista(decimal valorInicial, int numeroMeses)
         {
-            var valorFinalComJuros = _fixtures.CalculadoraJurosService.CalculaJuros(valorInicial, numeroMeses, taxaJuros).ToString("0.00", System.Globalization.CultureInfo.GetCultureInfo("pt-BR"));
-            var valorEsperado = CalculaJurosComposto(valorInicial, numeroMeses, taxaJuros).ToString("0.00", System.Globalization.CultureInfo.GetCultureInfo("pt-BR"));
+            var valorFinalComJuros = await _fixtures.CalculadoraJurosService.CalculaJurosAsync(
+                new CalculadoraJurosValorInicial(valorInicial),
+                new CalculadoraJurosMeses(numeroMeses));
 
-            Assert.Equal(valorFinalComJuros, valorEsperado);
+            var taxaJuros = await _fixtures.TaxaJurosAPIWebService.ObterTaxaJuros();
+
+            var valorEsperado = CalculaJurosComposto(valorInicial, numeroMeses, taxaJuros.ToDecimal()).ToString("0.00", System.Globalization.CultureInfo.GetCultureInfo("pt-BR"));
+
+            Assert.Equal(valorFinalComJuros.ToString(), valorEsperado);
         }
 
         private double CalculaJurosComposto(decimal valorInicial, int numeroMeses, decimal taxaJuros)

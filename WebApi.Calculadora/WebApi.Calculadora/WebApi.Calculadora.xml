@@ -9,7 +9,7 @@
             Controller responsável por gerenciar requisições referentes a calculadora de Juros.
             </summary>
         </member>
-        <member name="M:WebApi.Juros.Controllers.CalculaJuros.Get(WebApi.Calculadora.Interfaces.ICalculadoraJuros)">
+        <member name="M:WebApi.Juros.Controllers.CalculaJuros.Get(WebApi.Calculadora.Interfaces.ICalculadoraJuros,WebApi.Calculadora.DTOs.CalculaJurosRequestDTO)">
             <summary>
             Efetua o cálculo do juros composto baseado nos valores obtidos por parãmetros
             </summary>

@@ -1,7 +1,10 @@
-﻿namespace WebApi.Calculadora.Interfaces
+﻿using System.Threading.Tasks;
+using WebApi.Calculadora.Domain.ValueObjects;
+
+namespace WebApi.Calculadora.Interfaces
 {
     public interface ICalculadoraJuros
     {
-        double CalculaJuros(decimal valorInicial, int numeroMeses, decimal taxaJuros); 
+        Task<CalculadoraJurosDecimalPositivo> CalculaJurosAsync(CalculadoraJurosValorInicial valorInicial, CalculadoraJurosMeses numeroMeses); 
     }
 }

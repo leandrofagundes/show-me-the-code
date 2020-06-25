@@ -1,5 +1,10 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using System;
+using System.Threading.Tasks;
+using WebApi.Calculadora.Domain.Exceptions;
+using WebApi.Calculadora.Domain.ValueObjects;
+using WebApi.Calculadora.DTOs;
 using WebApi.Calculadora.Interfaces;
 
 namespace WebApi.Juros.Controllers
@@ -22,10 +27,30 @@ namespace WebApi.Juros.Controllers
         [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(double))]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-        public IActionResult Get([FromServices] ICalculadoraJuros calculadoraJurosCompostoService)
+        public async Task<IActionResult> Get(
+            [FromServices] ICalculadoraJuros calculadoraJurosCompostoService,
+            [FromQuery]CalculaJurosRequestDTO requestData)
         {
-            var jurosComposto = calculadoraJurosCompostoService.CalculaJuros(0, 0, 0);
-            return new OkObjectResult(jurosComposto);
+            try
+            {
+                var valorInicial = new CalculadoraJurosValorInicial(requestData.ValorInicial);
+                var meses = new CalculadoraJurosMeses(requestData.Meses);
+
+                var jurosComposto = await calculadoraJurosCompostoService.CalculaJurosAsync(valorInicial, meses);
+
+                return new OkObjectResult(jurosComposto);
+            }
+            catch (InvalidValueObjectDataException invalidDataEx)
+            {
+                return new BadRequestObjectResult($"{invalidDataEx.Message} Valor informado: {invalidDataEx.Value}");
+            }
+            catch (Exception)
+            {
+                return new ObjectResult("Ocorreu um erro inesperado no servidor. Entre em contato com nosso suporte")
+                {
+                    StatusCode = 500,
+                };
+            }
         }
     }
 }
