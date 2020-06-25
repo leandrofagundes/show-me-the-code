@@ -5,6 +5,7 @@ using Microsoft.Extensions.PlatformAbstractions;
 using Swashbuckle.AspNetCore.SwaggerGen;
 using System.IO;
 using System.Reflection;
+using WebApi.Calculadora.Helpers;
 
 namespace WebApi.Calculadora.DependencyInjections
 {
@@ -45,7 +46,7 @@ namespace WebApi.Calculadora.DependencyInjections
             app.UseSwaggerUI(
                 options =>
                 {
-                    options.DocumentTitle = "Show me The Code - Documentação da API";
+                    options.DocumentTitle = "WebApi Calculadora de Juros - Documentação da API";
                     // Constrói uma interface visual do Swagger para cada Endpoint de Versão encontrado na aplicação
                     options.SwaggerEndpoint($"/swagger/v1/swagger.json", "v1");
                 });

@@ -16,14 +16,14 @@ namespace WebApi.Calculadora.Helpers
         {
             var info = new OpenApiInfo()
             {
-                Title = "Show me The Code API",
+                Title = "Calculadora de Juros API",
                 Version = "v1",
                 Contact = new OpenApiContact
                 {
                     Name = "Leandro Fagundes",
                     Email = "leandro@fagundes.email"
                 },
-                Description = "Esta documentação refere-se a API utilizada para a construção do Show me The Code."
+                Description = "Esta documentação refere-se a API de cálculo de juros ."
             };
 
             return info;
