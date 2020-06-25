@@ -4678,23 +4678,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\leandro.fagundes\\.nuget\\packages\\": {},
+    "C:\\Users\\Leandro\\.nuget\\packages\\": {},
     "C:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\leandro.fagundes\\Source\\Repos\\show-me-the-code\\WebApi.Juros\\WebApi.Juros.csproj",
+      "projectUniqueName": "C:\\Users\\Leandro\\source\\repos\\show-me-the-code\\WebApi.Juros\\WebApi.Juros.csproj",
       "projectName": "WebApi.Juros",
-      "projectPath": "C:\\Users\\leandro.fagundes\\Source\\Repos\\show-me-the-code\\WebApi.Juros\\WebApi.Juros.csproj",
-      "packagesPath": "C:\\Users\\leandro.fagundes\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\leandro.fagundes\\Source\\Repos\\show-me-the-code\\WebApi.Juros\\obj\\",
+      "projectPath": "C:\\Users\\Leandro\\source\\repos\\show-me-the-code\\WebApi.Juros\\WebApi.Juros.csproj",
+      "packagesPath": "C:\\Users\\Leandro\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Leandro\\source\\repos\\show-me-the-code\\WebApi.Juros\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\leandro.fagundes\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Leandro\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
@@ -4750,7 +4750,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
       }
     }
   }

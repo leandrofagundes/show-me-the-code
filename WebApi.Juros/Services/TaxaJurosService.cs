@@ -1,10 +1,12 @@
-﻿namespace WebApi.Juros.Services
+﻿using WebApi.Juros.Domain.ValueObjects;
+
+namespace WebApi.Juros.Services
 {
     public sealed class TaxaJurosService
     {
-        public double ObterTaxaJuros() 
+        public TaxaJuros ObterTaxaJuros()
         {
-            return 0.01;
+            return new TaxaJuros(0.01);
         }
     }
 }
