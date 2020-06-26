@@ -1,0 +1,41 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30204.135
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApi.TaxaDeJuros.Tests", "..\tests\WebApi.TaxaDeJuros.Tests\WebApi.TaxaDeJuros.Tests.csproj", "{4E31399A-66A5-438F-868C-CFC740800F38}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApi.TaxaDeJuros", "WebApi.TaxaDeJuros\WebApi.TaxaDeJuros.csproj", "{6F2733B6-7760-4689-AAAB-F1284012FE8E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4E31399A-66A5-438F-868C-CFC740800F38}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E31399A-66A5-438F-868C-CFC740800F38}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E31399A-66A5-438F-868C-CFC740800F38}.Debug|x64.ActiveCfg = Debug|x64
+		{4E31399A-66A5-438F-868C-CFC740800F38}.Debug|x64.Build.0 = Debug|x64
+		{4E31399A-66A5-438F-868C-CFC740800F38}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E31399A-66A5-438F-868C-CFC740800F38}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E31399A-66A5-438F-868C-CFC740800F38}.Release|x64.ActiveCfg = Release|x64
+		{4E31399A-66A5-438F-868C-CFC740800F38}.Release|x64.Build.0 = Release|x64
+		{6F2733B6-7760-4689-AAAB-F1284012FE8E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F2733B6-7760-4689-AAAB-F1284012FE8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F2733B6-7760-4689-AAAB-F1284012FE8E}.Debug|x64.ActiveCfg = Debug|x64
+		{6F2733B6-7760-4689-AAAB-F1284012FE8E}.Debug|x64.Build.0 = Debug|x64
+		{6F2733B6-7760-4689-AAAB-F1284012FE8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F2733B6-7760-4689-AAAB-F1284012FE8E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6F2733B6-7760-4689-AAAB-F1284012FE8E}.Release|x64.ActiveCfg = Release|x64
+		{6F2733B6-7760-4689-AAAB-F1284012FE8E}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E7529C35-2121-4087-B08C-3D291226AC72}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>WebApi.CalculadoraDeJuros</name>
+    </assembly>
+    <members>
+        <member name="T:WebApi.CalculadoraDeJuros.Controllers.CalculaJurosController">
+            <summary>
+            Controller responsável por gerenciar requisições referentes a calculadora de Juros.
+            </summary>
+        </member>
+        <member name="M:WebApi.CalculadoraDeJuros.Controllers.CalculaJurosController.Get(WebApi.CalculadoraDeJuros.Interfaces.ICalculadoraJuros,WebApi.CalculadoraDeJuros.DTOs.CalculaJurosRequestDTO)">
+            <summary>
+            Efetua o cálculo do juros composto baseado nos valores obtidos por parãmetros
+            </summary>
+            <response code="200">Solicitação foi concluída com sucesso.</response>
+            <response code="400">Sua solicitação apresentou valores inválidos e por isso será rejeitada.</response>
+            <response code="500">Ocorreu um erro inesperado no servidor.</response>
+            <returns>Retorna um double com a taxa de juros.</returns>
+        </member>
+        <member name="T:WebApi.CalculadoraDeJuros.Controllers.ShowMeTheCodeController">
+            <summary>
+            Controller responsável por retornar a url aonde o código fonte encontra-se.
+            </summary>
+        </member>
+        <member name="M:WebApi.CalculadoraDeJuros.Controllers.ShowMeTheCodeController.Get(WebApi.CalculadoraDeJuros.Interfaces.IShowMeTheCode)">
+            <summary>
+            Retorna a url do repositório de fontes.
+            </summary>
+            <response code="200">Solicitação foi concluída com sucesso.</response>
+            <response code="500">Ocorreu um erro inesperado no servidor.</response>
+            <returns>Retorna uma string com a url do repositório de fontes.</returns>
+        </member>
+    </members>
+</doc>
