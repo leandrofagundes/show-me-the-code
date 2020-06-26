@@ -14,7 +14,7 @@ namespace WebApi.Juros.Controllers
     /// </summary>
     [Route("[controller]")]
     [ApiController]
-    public class CalculaJuros : Controller
+    public class CalculaJurosController : Controller
     {
         /// <summary>
         /// Efetua o cálculo do juros composto baseado nos valores obtidos por parãmetros
@@ -24,7 +24,7 @@ namespace WebApi.Juros.Controllers
         /// <response code="500">Ocorreu um erro inesperado no servidor.</response>
         /// <returns>Retorna um double com a taxa de juros.</returns>
         [HttpGet]
-        [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(double))]
+        [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(string))]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public async Task<IActionResult> Get(

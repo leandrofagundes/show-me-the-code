@@ -9,6 +9,7 @@ namespace WebApi.Calculadora.DependencyInjections
         public static void AddApplicationServices(this IServiceCollection services)
         {
             services.AddScoped<ICalculadoraJuros, CalculadoraJurosCompostoService>();
+            services.AddScoped<IShowMeTheCode, ShowMeTheCodeService>();
         }
     }
 }
