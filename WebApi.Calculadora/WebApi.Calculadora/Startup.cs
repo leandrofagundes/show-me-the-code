@@ -9,11 +9,18 @@ namespace WebApi.Calculadora
 {
     public class Startup
     {
-        public void ConfigureServices(IServiceCollection services, IConfiguration configuration)
+        private readonly IConfiguration Configuration;
+
+        public Startup(IConfiguration configuration)
+        {
+            this.Configuration = configuration;
+        }
+
+        public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
             services.AddApplicationServices();
-            services.AddTaxaJurosWebServices(configuration);
+            services.AddTaxaJurosWebServices(this.Configuration);
             services.AddSwagger();
         }
 

@@ -4,7 +4,7 @@ using WebApi.Calculadora.Domain.ValueObjects;
 using WebApi.Calculadora.Tests.Fixtures;
 using Xunit;
 
-namespace WebApi.Calculadora.Tests.UnitTests
+namespace WebApi.Calculadora.Tests.IntegrationTests
 {
     public class CalculadoraJurosCompostoTest : IClassFixture<DefaultFixtures>
     {
@@ -29,11 +29,11 @@ namespace WebApi.Calculadora.Tests.UnitTests
         }
 
         [Theory]
-        [InlineData(100, 5)]
-        [InlineData(100, 10)]
-        [InlineData(1100, 10)]
-        [InlineData(1100, 5)]
-        public async Task CalcularTaxaJurosCompostoEmLista(decimal valorInicial, int numeroMeses)
+        [InlineData(100, 5, "105,10")]
+        [InlineData(100, 10, "110,46")]
+        [InlineData(1100, 10, "1215,08")]
+        [InlineData(1100, 5, "1156,11")]
+        public async Task CalcularTaxaJurosCompostoEmLista(decimal valorInicial, int numeroMeses, string valorEsperado)
         {
             var valorFinalComJuros = await _fixtures.CalculadoraJurosService.CalculaJurosAsync(
                 new CalculadoraJurosValorInicial(valorInicial),
@@ -41,17 +41,7 @@ namespace WebApi.Calculadora.Tests.UnitTests
 
             var taxaJuros = await _fixtures.TaxaJurosAPIWebService.ObterTaxaJuros();
 
-            var valorEsperado = CalculaJurosComposto(valorInicial, numeroMeses, taxaJuros.ToDecimal()).ToString("0.00", System.Globalization.CultureInfo.GetCultureInfo("pt-BR"));
-
             Assert.Equal(valorFinalComJuros.ToString(), valorEsperado);
-        }
-
-        private double CalculaJurosComposto(decimal valorInicial, int numeroMeses, decimal taxaJuros)
-        {
-            double taxaJurosFator = Convert.ToDouble(1 + taxaJuros);
-            double jurosCompostoAoMes = Math.Pow(taxaJurosFator, numeroMeses);
-            double valorFinal = (double)valorInicial * jurosCompostoAoMes;
-            return valorFinal;
         }
     }
 }

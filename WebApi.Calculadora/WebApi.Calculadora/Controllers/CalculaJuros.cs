@@ -38,7 +38,7 @@ namespace WebApi.Juros.Controllers
 
                 var jurosComposto = await calculadoraJurosCompostoService.CalculaJurosAsync(valorInicial, meses);
 
-                return new OkObjectResult(jurosComposto);
+                return new OkObjectResult(jurosComposto.ToString());
             }
             catch (InvalidValueObjectDataException invalidDataEx)
             {

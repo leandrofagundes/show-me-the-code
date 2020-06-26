@@ -358,3 +358,5 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+/WebApi.Calculadora/WebApi.Calculadora/WebApi.Calculadora.xml
+/WebApi.Juros/WebApi.Juros.xml

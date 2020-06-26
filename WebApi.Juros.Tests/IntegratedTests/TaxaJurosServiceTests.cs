@@ -1,13 +1,13 @@
 using WebApi.Juros.Tests.Fixtures;
 using Xunit;
 
-namespace WebApi.Juros.Tests.UnitTests
+namespace WebApi.Juros.Tests.IntegratedTests
 {
-    public class TaxaJuroTests : IClassFixture<DefaultFixtures>
+    public class TaxaJurosServiceTests : IClassFixture<DefaultFixtures>
     {
         private readonly DefaultFixtures _fixtures;
 
-        public TaxaJuroTests(DefaultFixtures fixtures)
+        public TaxaJurosServiceTests(DefaultFixtures fixtures)
         {
             this._fixtures = fixtures;
         }
@@ -16,9 +16,10 @@ namespace WebApi.Juros.Tests.UnitTests
         public void ObterTaxaJurosComSucesso()
         {
             var taxaJuros = _fixtures.TaxaJurosService.ObterTaxaJuros();
-            double expectedValue = 0.01;
 
-            Assert.Equal(taxaJuros, expectedValue);
+            string valorEsperado = "0,01";
+
+            Assert.Equal(valorEsperado, taxaJuros.ToString());
         }
     }
 }
