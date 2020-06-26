@@ -16,14 +16,14 @@ namespace WebApi.Juros.Helpers
         {
             var info = new OpenApiInfo()
             {
-                Title = "Show me The Code API",
+                Title = "Taxa de Juros API",
                 Version = "v1",
                 Contact = new OpenApiContact
                 {
                     Name = "Leandro Fagundes",
                     Email = "leandro@fagundes.email"
                 },
-                Description = "Esta documentação refere-se a API utilizada para a construção do Show me The Code."
+                Description = "Esta documentação refere-se a API para obtenção da Taxa de Juros do Show me The Code."
             };
 
             return info;
