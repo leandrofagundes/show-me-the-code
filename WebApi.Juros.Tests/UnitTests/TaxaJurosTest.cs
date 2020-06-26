@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Globalization;
-using System.Text;
-using WebApi.Juros.Controllers;
+﻿using System.Globalization;
 using WebApi.Juros.Domain.Exceptions;
 using WebApi.Juros.Domain.ValueObjects;
 using Xunit;
