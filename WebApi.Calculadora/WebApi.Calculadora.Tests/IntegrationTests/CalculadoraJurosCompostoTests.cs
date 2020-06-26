@@ -6,11 +6,11 @@ using Xunit;
 
 namespace WebApi.Calculadora.Tests.IntegrationTests
 {
-    public class CalculadoraJurosCompostoTest : IClassFixture<DefaultFixtures>
+    public class CalculadoraJurosCompostoTests : IClassFixture<DefaultFixtures>
     {
         private readonly DefaultFixtures _fixtures;
 
-        public CalculadoraJurosCompostoTest(DefaultFixtures fixtures)
+        public CalculadoraJurosCompostoTests(DefaultFixtures fixtures)
         {
             this._fixtures = fixtures;
         }
