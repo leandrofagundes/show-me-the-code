@@ -360,3 +360,4 @@ MigrationBackup/
 FodyWeavers.xsd
 /WebApi.Calculadora/WebApi.Calculadora/WebApi.Calculadora.xml
 /WebApi.Juros/WebApi.Juros.xml
+/WebApi.TaxaDeJuros/WebApi.TaxaDeJuros.xml
