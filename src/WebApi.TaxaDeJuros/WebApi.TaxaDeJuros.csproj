@@ -17,6 +17,10 @@
     <NoWarn>1701;1702;1591;IDE0066</NoWarn>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>WebApi.TaxaDeJuros.xml</DocumentationFile>
+  </PropertyGroup>
+
   <ItemGroup>
     <Compile Remove="bin\**" />
     <Compile Remove="obj\**" />
@@ -30,6 +34,7 @@
 
   <ItemGroup>
     <None Remove="DependencyInjections\xcnpdzks.yvg~" />
+    <None Remove="WebApi.TaxaDeJuros.xml" />
   </ItemGroup>
 
   <ItemGroup>
