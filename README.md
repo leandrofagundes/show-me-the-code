@@ -11,10 +11,16 @@ A ideia é trabalhar utilizando so cartões do boards em uma visão de scrum com gi
 1.	Clone o repositório para sua máquina.
 2.	Navegue no Package Manager do seu Visual Studio ou no prompt do seu VSCode para a raiz do projeto.
 3.  Execute `dotnet restore .\WebApi.TaxaDeJuros` para garantir que todos os pacotes desse projeto estejam restaurados.
-3.	Faça o mesmo para o comando `dotnet restore .\WebApi.CalculadoraDeJuros` para garantir que todos os pacotes do segundo projeto estejam restaurados.
+4.	Faça o mesmo para o comando `dotnet restore .\WebApi.CalculadoraDeJuros` para garantir que todos os pacotes do segundo projeto estejam restaurados.
 
 # Build and Test
 1.  Execute `dotnet test .\tests\WebApi.CalculadoraDeJuros.Tests\WebApi.CalculadoraDeJuros.Tests.csproj` da raiz do seu projeto no seu PackageManger ou no Promp do seu VScode para executar o pacote de testes desse projeto.
 2.  Faça o mesmo executando o comando `dotnet test .\tests\WebApi.TaxaDeJuros.Tests\WebApi.TaxaDeJuros.Tests.csproj` para rodar os testes desse outro projeto.
 
+# Docker
+
+Primeiramente, vamos criar a imagem do docker que será utilizada nesse projeto.
+```sh
+docker build -t taxajuros . -f .\WebApi.TaxaDeJuros\Dockerfile
+```
 
