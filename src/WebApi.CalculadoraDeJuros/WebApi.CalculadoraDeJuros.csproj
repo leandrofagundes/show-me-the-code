@@ -11,6 +11,11 @@
     <DocumentationFile>WebApi.CalculadoraDeJuros.xml</DocumentationFile>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>WebApi.CalculadoraDeJuros.xml</DocumentationFile>
+    <NoWarn>1701;1702;1591;IDE0066</NoWarn>
+  </PropertyGroup>
+
   <ItemGroup>
     <None Remove="WebApi.CalculadoraDeJuros.xml" />
   </ItemGroup>

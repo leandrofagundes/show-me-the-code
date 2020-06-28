@@ -7,7 +7,7 @@ namespace WebApi.CalculadoraDeJuros.Services
     {
         public string GetUrl()
         {
-            return "https://dev.azure.com/leandro-fagundes/show-me-the-code";
+            return "https://github.com/leandrofagundes/show-me-the-code";
         }
     }
 }
