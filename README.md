@@ -8,11 +8,13 @@ Pretendo utilizar ASP.NET Core 3.1 para as APIs, Docker para distribuição, .NetS
 A ideia é trabalhar utilizando so cartões do boards em uma visão de scrum com git flow para os fontes.
 
 # Iniciando
-TODO
-1.	
-2.	
-3.	
-4.	
+1.	Clone o repositório para sua máquina.
+2.	Navegue no Package Manager do seu Visual Studio ou no prompt do seu VSCode para a raiz do projeto.
+3.  Execute `dotnet restore .\WebApi.TaxaDeJuros` para garantir que todos os pacotes desse projeto estejam restaurados.
+3.	Faça o mesmo para o comando `dotnet restore .\WebApi.CalculadoraDeJuros` para garantir que todos os pacotes do segundo projeto estejam restaurados.
 
 # Build and Test
-TODO
+1.  Execute `dotnet test .\tests\WebApi.CalculadoraDeJuros.Tests\WebApi.CalculadoraDeJuros.Tests.csproj` da raiz do seu projeto no seu PackageManger ou no Promp do seu VScode para executar o pacote de testes desse projeto.
+2.  Faça o mesmo executando o comando `dotnet test .\tests\WebApi.TaxaDeJuros.Tests\WebApi.TaxaDeJuros.Tests.csproj` para rodar os testes desse outro projeto.
+
+
